@@ -16,11 +16,24 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_HOST_USER ='ccnivetha.2@gmail.com'
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Nivetha C C <ccnivetha.2@gmail.com>'
+
+
+ADMINS = (
+    ('Nivetha C C','ccnivetha.2@gmail.com'),
+    )
+MANAGERS = ADMINS
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vv)7n$)3$$il8df19#)l3*d7#i(0d01tednk%_!23jc+2!5ynj'
+SECRET_KEY = os.environ.get('SECRET_KEY','vv)7n$)3$$il8df19#)l3*d7#i(0d01tednk%_!23jc+2!5ynj')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
