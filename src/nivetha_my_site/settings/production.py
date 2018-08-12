@@ -25,7 +25,7 @@ SECRET_KEY = 'vv)7n$)3$$il8df19#)l3*d7#i(0d01tednk%_!23jc+2!5ynj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nivetha-cc.herokuapp.com']
 
 
 # Application definition
@@ -83,6 +83,10 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+#DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

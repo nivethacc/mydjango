@@ -1,3 +1,5 @@
+nivetha_my_site/settings/local.py
+nivetha_my_site/settings/base.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
