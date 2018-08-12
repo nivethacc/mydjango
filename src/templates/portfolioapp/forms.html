@@ -1,0 +1,27 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static "portfolioapp/css/frontpage.css" %}" type="text/css"/>
+<script src="{% static "portfolioapp/js/frontpage.js" %}"/></script>
+
+<title>{% block head_title %}Nivetha C C - My Portfolio website{% endblock head_title %}</title>
+<body onload="javascript:openNav()">
+
+<div id="myNav" class="overlay">
+	
+  
+  <div class="overlay-content">
+  	<h2>WELCOME TO MY PORTFOLIO WEBSITE !!!</h2>
+	<h2>Please fill out the details to continue to my site.</h2>
+	<br>
+   <form method='POST'>
+		{% csrf_token %}
+		{{ form.as_p }}
+		<br>
+		<button type="submit" background="blue">Submit & Continue</button>
+	</form>
+  </div>
+</div>
+
+
+</body>
+
